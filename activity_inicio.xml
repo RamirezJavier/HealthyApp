@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context="com.javierramirez.healthyapp.Inicio">
+
+    <TextView
+        android:id="@+id/txtAltura"
+        android:layout_width="119dp"
+        android:layout_height="26dp"
+        android:layout_alignEnd="@+id/txtEdad"
+        android:layout_alignStart="@+id/txtEdad"
+        android:layout_below="@+id/EdadActual"
+        android:layout_marginTop="11dp"
+        android:text="Altura Actual (m):"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="283dp" />
+
+    <TextView
+        android:id="@+id/txtEdad"
+        android:layout_width="119dp"
+        android:layout_height="26dp"
+        android:layout_alignEnd="@+id/txtNombre"
+        android:layout_alignStart="@+id/txtNombre"
+        android:layout_below="@+id/UserName"
+        android:layout_marginTop="19dp"
+        android:text="Edad Actual:"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <TextView
+        android:id="@+id/txtPeso"
+        android:layout_width="119dp"
+        android:layout_height="25dp"
+        android:layout_alignEnd="@+id/txtEdad"
+        android:layout_alignStart="@+id/txtEdad"
+        android:layout_below="@+id/AlturaActual"
+        android:layout_marginTop="16dp"
+        android:text="Peso Actual (Kg):"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="226dp" />
+
+    <TextView
+        android:id="@+id/txtBienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="HEALTHY APP"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="172dp"
+        android:layout_height="27dp"
+        android:layout_below="@+id/txtBienvenida"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Nombre Completo:"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <EditText
+        android:id="@+id/UserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/PesoActual"
+        android:layout_below="@+id/txtNombre"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/background_light" />
+
+    <EditText
+        android:id="@+id/PesoActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/AlturaActual"
+        android:layout_below="@+id/txtPeso"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/AlturaActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/EdadActual"
+        android:layout_below="@+id/txtAltura"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/EdadActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEdad"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName|number"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnComenzar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Comenzar"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtPeso"
+        android:layout_alignEnd="@+id/txtPeso" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/radioGroup2"
+        android:layout_marginStart="37dp"
+        android:layout_below="@+id/PesoActual"
+        android:layout_alignStart="@+id/txtPeso">
+
+        <RadioButton
+            android:id="@+id/radioHombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtPeso"
+            android:layout_below="@+id/PesoActual"
+            android:layout_marginEnd="34dp"
+            android:layout_marginTop="21dp"
+            android:text="Hombre"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioMujer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnComenzar"
+            android:layout_alignStart="@+id/radioHombre"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="120dp"
+            android:text="Mujer"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>

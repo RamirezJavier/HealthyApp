@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/UserInterface"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.javierramirez.healthyapp.UsuarioInterfaz">
+
+
+    <TextView
+        android:id="@+id/txtBienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="17dp"
+        android:text="Bienvenido(a) "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSuNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtBienvenido"
+        android:layout_alignBottom="@+id/txtBienvenido"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/txtBienvenido"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtIndice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtBienvenido"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:text="Tu Indice de Masa Corporal (IMC) es de:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtIndice"
+        android:layout_alignBottom="@+id/txtIndice"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/txtIndice"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvRiesgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvIMC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Riesgo"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btnHistorial"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        app:srcCompat="@drawable/historial100"
+        android:layout_below="@+id/tvRiesgo"
+        android:layout_alignStart="@+id/tvSuNombre"
+        android:layout_marginStart="11dp" />
+
+    <ImageButton
+        android:id="@+id/btnUserSettings"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnEjercicios"
+        android:layout_alignEnd="@+id/txtNext"
+        app:srcCompat="@drawable/conf100" />
+
+    <ImageButton
+        android:id="@+id/btnEjercicios"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ejercicio100"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/btnHistorial"
+        android:layout_alignStart="@+id/btnUserSettings" />
+
+    <ImageButton
+        android:id="@+id/btnDietas"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/recetas100"
+        android:layout_alignTop="@+id/btnEjercicios"
+        android:layout_alignStart="@+id/btnHistorial" />
+
+    <TextView
+        android:id="@+id/txtNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Tu siguiente paso es:"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtIndice" />
+
+    <TextView
+        android:id="@+id/tvNextStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mantenerte en ESTABLE"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/txtNext"
+        android:layout_alignBottom="@+id/txtNext"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/txtNext" />
+
+    <ImageButton
+        android:id="@+id/btnInfo"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/info20"
+        android:layout_alignTop="@+id/txtBienvenido"
+        android:layout_alignStart="@+id/txtIndice" />
+
+</RelativeLayout>
